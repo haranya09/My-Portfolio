@@ -1,0 +1,920 @@
+/* ===============================
+   GOOGLE FONT & RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F5F3FF;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#6C63FF;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD54F;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    background:linear-gradient(135deg,#6C63FF,#8E84FF);
+}
+
+.hero-content{
+    max-width:600px;
+    color:white;
+}
+
+.hello{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.hero-content h1{
+    font-size:62px;
+    line-height:75px;
+}
+
+.hero-content h2{
+    margin-top:15px;
+    color:#FFE082;
+    font-size:30px;
+}
+
+.description{
+    margin-top:20px;
+    line-height:32px;
+    font-size:18px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:20px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.btn{
+    padding:15px 32px;
+    border-radius:40px;
+    background:white;
+    color:#6C63FF;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+}
+
+.btn:hover{
+    transform:translateY(-6px);
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#6C63FF;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+
+.social{
+    margin-top:35px;
+}
+
+.social a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:white;
+    color:#6C63FF;
+    margin-right:15px;
+    text-decoration:none;
+    font-size:20px;
+    transition:.35s;
+}
+
+.social a:hover{
+    transform:scale(1.15);
+}
+
+/* ===============================
+   PROFILE IMAGE
+================================ */
+
+.hero-image img{
+    width:360px;
+    height:360px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 25px 50px rgba(0,0,0,.25);
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    color:#6C63FF;
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:992px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-image{
+    margin-bottom:50px;
+}
+
+.hero-content h1{
+    font-size:46px;
+    line-height:58px;
+}
+
+.hero-content h2{
+    font-size:24px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.social{
+    text-align:center;
+}
+
+nav{
+    display:none;
+}
+
+.hero-image img{
+    width:280px;
+    height:280px;
+}
+
+}
+/* ===============================
+   ABOUT SECTION
+================================ */
+
+.about-container{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.about-card{
+
+max-width:900px;
+
+background:white;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.about-card h3{
+
+color:#6C63FF;
+
+margin-bottom:20px;
+
+font-size:28px;
+
+}
+
+.about-card p{
+
+font-size:18px;
+
+line-height:34px;
+
+color:#555;
+
+}
+
+/* ===============================
+   EDUCATION
+================================ */
+
+.timeline{
+
+max-width:900px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:25px;
+
+top:0;
+
+width:4px;
+
+height:100%;
+
+background:#6C63FF;
+
+}
+
+.timeline-card{
+
+display:flex;
+
+margin-bottom:40px;
+
+}
+
+.timeline-dot{
+
+width:22px;
+
+height:22px;
+
+background:#6C63FF;
+
+border-radius:50%;
+
+margin-right:35px;
+
+margin-top:10px;
+
+flex-shrink:0;
+
+}
+
+.timeline-content{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+width:100%;
+
+transition:.4s;
+
+}
+
+.timeline-content:hover{
+
+transform:translateX(10px);
+
+}
+
+.timeline-content h3{
+
+color:#6C63FF;
+
+margin-bottom:15px;
+
+}
+
+.timeline-content p{
+
+margin:10px 0;
+
+font-size:17px;
+
+}
+/* ===============================
+   SKILLS
+================================ */
+
+#skills{
+
+background:#f8f7ff;
+
+}
+
+.skills-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+.skill-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:22px;
+
+text-align:center;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.skill-card:hover{
+
+transform:translateY(-12px);
+
+background:#6C63FF;
+
+color:white;
+
+}
+
+.skill-card i{
+
+font-size:55px;
+
+color:#6C63FF;
+
+margin-bottom:20px;
+
+transition:.4s;
+
+}
+
+.skill-card:hover i{
+
+color:white;
+
+transform:scale(1.2);
+
+}
+
+.skill-card h3{
+
+margin-bottom:12px;
+
+font-size:24px;
+
+}
+
+.skill-card p{
+
+font-size:16px;
+
+line-height:28px;
+
+}
+/*==============================
+PROJECTS
+==============================*/
+
+#projects{
+
+background:white;
+
+}
+
+.projects-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.project-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+border-top:5px solid #6C63FF;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 40px rgba(108,99,255,.25);
+
+}
+
+.project-icon{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:#6C63FF;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:35px;
+
+margin-bottom:25px;
+
+}
+
+.project-card h3{
+
+margin-bottom:18px;
+
+color:#6C63FF;
+
+}
+
+.project-card p{
+
+line-height:30px;
+
+margin-bottom:20px;
+
+}
+
+.tech{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+}
+
+.tech span{
+
+background:#ECE9FF;
+
+color:#6C63FF;
+
+padding:8px 15px;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+/*==============================
+INTERNSHIPS
+==============================*/
+
+#internships{
+
+background:#F8F7FF;
+
+}
+
+.internship-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+gap:30px;
+
+}
+
+.internship-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+border-left:6px solid #6C63FF;
+
+transition:.4s;
+
+}
+
+.internship-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.internship-card h3{
+
+color:#6C63FF;
+
+margin-bottom:10px;
+
+}
+
+.internship-card h4{
+
+margin-bottom:15px;
+
+}
+
+/*==============================
+ACHIEVEMENTS
+==============================*/
+
+.achievement-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.achievement-card{
+
+background:white;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.achievement-card:hover{
+
+background:#6C63FF;
+
+color:white;
+
+transform:translateY(-10px);
+
+}
+
+.achievement-card i{
+
+font-size:45px;
+
+color:#6C63FF;
+
+margin-bottom:20px;
+
+}
+
+.achievement-card:hover i{
+
+color:white;
+
+}
+
+/*==============================
+CERTIFICATES
+==============================*/
+
+.certificate-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+.certificate-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+font-weight:600;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.certificate-card:hover{
+
+background:#6C63FF;
+
+color:white;
+
+transform:translateY(-8px);
+
+}
+/*==============================
+CONTACT
+==============================*/
+
+#contact{
+
+background:#F8F7FF;
+
+}
+
+.contact-container{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.contact-card{
+
+max-width:750px;
+
+width:100%;
+
+background:white;
+
+padding:45px;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.contact-card h3{
+
+color:#6C63FF;
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+line-height:30px;
+
+}
+
+.contact-info{
+
+margin:30px 0;
+
+}
+
+.contact-info p{
+
+margin:15px 0;
+
+font-size:18px;
+
+}
+
+.contact-info i{
+
+color:#6C63FF;
+
+margin-right:12px;
+
+}
+
+.contact-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+footer{
+
+background:#6C63FF;
+
+padding:45px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer-social{
+
+margin:25px 0;
+
+}
+
+.footer-social a{
+
+display:inline-flex;
+
+width:45px;
+
+height:45px;
+
+justify-content:center;
+
+align-items:center;
+
+background:white;
+
+color:#6C63FF;
+
+border-radius:50%;
+
+margin:0 10px;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-6px);
+
+}
+
+.copyright{
+
+margin-top:20px;
+
+font-size:15px;
+
+}
+
+/*==============================
+TOP BUTTON
+==============================*/
+
+#topBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+background:#6C63FF;
+
+color:white;
+
+font-size:22px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
